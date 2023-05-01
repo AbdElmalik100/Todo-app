@@ -4,9 +4,9 @@
       <header class="d-flex align-items-center justify-content-between mb-5">
         <h1 class="logo text-uppercase mb-0 fw-bold">Todo</h1>
         <div class="dark-light-icon">
-          <img v-if="defaultTheme === 'dark'" @click="defaultTheme = 'light'" src="../images/icon-sun.svg"
+          <img v-if="defaultTheme === 'dark'" @click="defaultTheme = 'light'" src="/images/icon-sun.svg"
             alt="">
-          <img v-else @click="defaultTheme = 'dark'" src="../images/icon-moon.svg" alt="">
+          <img v-else @click="defaultTheme = 'dark'" src="/images/icon-moon.svg" alt="">
         </div>
       </header>
       <div class="add-todo p-3 px-4 rounded d-flex align-items-center gap-3 mb-3">
@@ -21,11 +21,11 @@
               v-for="(todo, index) in filteration" :key="todo">
               <div :class="`left-side flex-fill d-flex align-items-center gap-3 ${todo.completed ? 'complete' : ''}`">
                 <span class="d-block rounded-circle position-relative" @click="todo.completed = !todo.completed">
-                  <img class="check position-absolute" src="../images/icon-check.svg" alt="">
+                  <img class="check position-absolute" src="/images/icon-check.svg" alt="">
                 </span>
                 <h5 class="mb-0 flex-fill">{{ todo.name }}</h5>
               </div>
-              <img @click="removeTodo(todo)" class="cross" src="../images/icon-cross.svg" alt="">
+              <img @click="removeTodo(todo)" class="cross" src="/images/icon-cross.svg" alt="">
             </div>
           </transition-group>
           <div class="d-flex align-items-center justify-content-center position-absolute w-100 h-100" v-else>
@@ -156,7 +156,7 @@ body {
 
 // Dark Theme
 .dark {
-  background-image: url(./images/bg-desktop-dark.jpg);
+  background-image: url(/images/bg-desktop-dark.jpg);
   background-color: var(--Very-Dark-Blue);
 
   .logo {
@@ -248,7 +248,7 @@ body {
   }
 
   @media (max-width: 767px) {
-    background-image: url(./images/bg-mobile-dark.jpg);
+    background-image: url(/images/bg-mobile-dark.jpg);
 
     .navs-mobile {
       background-color: var(--Very-Dark-Desaturated-Blue) !important;
@@ -270,7 +270,7 @@ body {
 
 // Light Theme
 .light {
-  background-image: url(./images/bg-desktop-light.jpg);
+  background-image: url(/images/bg-desktop-light.jpg);
   background-color: var(--Very-Light-Gray);
 
   .logo {
@@ -363,7 +363,7 @@ body {
   }
 
   @media (max-width: 767px) {
-    background-image: url(./images/bg-mobile-light.jpg);
+    background-image: url(/images/bg-mobile-light.jpg);
 
     .navs-mobile {
       background-color: white !important;
