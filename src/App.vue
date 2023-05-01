@@ -12,7 +12,7 @@
       <div class="add-todo p-3 px-4 rounded d-flex align-items-center gap-3 mb-3">
         <span class="d-block rounded-circle"></span>
         <input class="border-0 flex-fill p-0" type="text" placeholder="Create new todo..." v-model="todoInput"
-          @keypress.enter="addTodo">
+          @keyup.enter="addTodo">
       </div>
       <div class="todo-list rounded d-flex aling-items-center flex-column">
         <draggable v-model="todos" class="todo-body flex-fill position-relative">
@@ -23,7 +23,7 @@
                 <span class="d-block rounded-circle position-relative" @click="todo.completed = !todo.completed">
                   <img class="check position-absolute" src="/images/icon-check.svg" alt="">
                 </span>
-                <h5 class="mb-0 flex-fill">{{ todo.name }}</h5>
+                <h5 class="mb-0 w-75">{{ todo.name }}</h5>
               </div>
               <img @click="removeTodo(todo)" class="cross" src="/images/icon-cross.svg" alt="">
             </div>
